@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const SharingButton = props => (
   <a
@@ -9,11 +10,9 @@ const SharingButton = props => (
     onClick={props.onClick}
   >
     {props.icon({ className: 'react-sharing-button__icon' })}
-    <span className="react-sharing-button__text">
-      {props.text}
-    </span>
+    <span className="react-sharing-button__text">{props.text}</span>
   </a>
-)
+);
 
 SharingButton.propTypes = {
   type: PropTypes.string.isRequired,
@@ -21,6 +20,6 @@ SharingButton.propTypes = {
   text: PropTypes.string.isRequired,
   fullUrl: PropTypes.string.isRequired,
   onClick: PropTypes.func,
-}
+};
 
-export default SharingButton
+export default SharingButton;
