@@ -8,9 +8,9 @@ const SharingButton = props => (
     target="_blank"
     rel="noopener noreferrer"
     onClick={props.onClick}
+    title={props.text}
   >
     {props.icon({ className: 'react-sharing-button__icon' })}
-    <span className="react-sharing-button__text">{props.text}</span>
   </a>
 );
 
@@ -19,6 +19,7 @@ SharingButton.propTypes = {
   icon: PropTypes.func.isRequired,
   text: PropTypes.string.isRequired,
   fullUrl: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   onClick: PropTypes.func,
 };
 

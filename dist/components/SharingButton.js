@@ -22,14 +22,10 @@ var SharingButton = function SharingButton(props) {
       href: props.fullUrl,
       target: '_blank',
       rel: 'noopener noreferrer',
-      onClick: props.onClick
+      onClick: props.onClick,
+      title: props.text
     },
-    props.icon({ className: 'react-sharing-button__icon' }),
-    _react2.default.createElement(
-      'span',
-      { className: 'react-sharing-button__text' },
-      props.text
-    )
+    props.icon({ className: 'react-sharing-button__icon' })
   );
 };
 
@@ -38,6 +34,7 @@ SharingButton.propTypes = {
   icon: _propTypes2.default.func.isRequired,
   text: _propTypes2.default.string.isRequired,
   fullUrl: _propTypes2.default.string.isRequired,
+  title: _propTypes2.default.string.isRequired,
   onClick: _propTypes2.default.func
 };
 
