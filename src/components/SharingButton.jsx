@@ -19,7 +19,6 @@ SharingButton.propTypes = {
   icon: PropTypes.func.isRequired,
   text: PropTypes.string.isRequired,
   fullUrl: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
   onClick: PropTypes.func,
 };
 
